@@ -23,12 +23,12 @@ jobs:
         id: builddeploy
         uses: Azure/static-web-apps-deploy@v1
         with:
-          azure_static_web_apps_api_token: ${{ secrets.AZURE_STATIC_WEB_APPS_API_TOKEN_ZEALOUS_ROCK087CE330F1 }}  # ← Usa EXACTAMENTE este nombre (tu secreto nuevo con F1)
-          repo_token: ${{ secrets.GITHUB_TOKEN }}  # Recomendado para PRs y estabilidad
+          azure_static_web_apps_api_token: ${{ secrets.AZURE_STATIC_WEB_APPS_API_TOKEN_ZEALOUS_ROCK_087CE330F1 }}  # ← Nombre EXACTO con _ entre ROCK y 087 + F1
+          repo_token: ${{ secrets.GITHUB_TOKEN }}  # Recomendado para PRs
           action: "upload"
-          app_location: "/"          # Raíz del repo (index.html directamente aquí)
-          api_location: ""           # Vacío: no tienes API
-          output_location: ""        # Vacío: no hay build, archivos estáticos ya listos
+          app_location: "/"          # Raíz donde está index.html
+          api_location: ""           # Vacío
+          output_location: ""        # Vacío para sitios sin build
 
   close_pull_request_job:
     if: github.event_name == 'pull_request' && github.event.action == 'closed'
@@ -38,5 +38,5 @@ jobs:
       - name: Close Pull Request
         uses: Azure/static-web-apps-deploy@v1
         with:
-          azure_static_web_apps_api_token: ${{ secrets.AZURE_STATIC_WEB_APPS_API_TOKEN_ZEALOUS_ROCK087CE330F1 }}  # Mismo secreto con F1
+          azure_static_web_apps_api_token: ${{ secrets.AZURE_STATIC_WEB_APPS_API_TOKEN_ZEALOUS_ROCK_087CE330F1 }}  # ← Mismo secreto aquí
           action: "close"
