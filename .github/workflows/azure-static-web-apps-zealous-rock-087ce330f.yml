@@ -15,21 +15,18 @@ jobs:
     runs-on: ubuntu-latest
     name: Build and Deploy Job
     steps:
-      - uses: actions/checkout@v4
+      - name: Checkout
+        uses: actions/checkout@v4
 
       - name: Deploy to Azure Static Web Apps
         uses: Azure/static-web-apps-deploy@v1
         with:
-          azure_static_web_apps_api_token: ${{ secrets.AZURE_STATIC_WEB_APPS_API_TOKEN_ZEALOUS_ROCK_087CE330F }}
-          action: upload
-
-          # Tu sitio está en la raíz del repo (index.html en el root)
-          app_location: "/"
-          api_location: ""
-          output_location: ""
-
-          # Como es HTML/CSS/JS sin build
-          skip_app_build: true
+          azure_static_web_apps_api_token: ${{ secrets.AZURE_STATIC_WEB_APPS_API_TOKEN_ZEALOUS_ROCK_087CE330F }}  # ← CAMBIA ESTO SI ES NECESARIO (ver abajo)
+          action: "upload"
+          app_location: "/"               # Raíz del repo (donde está index.html)
+          api_location: ""                # Vacío: no tienes API
+          output_location: ""             # Vacío: no hay build, archivos ya están listos
+          # No uses skip_app_build: no existe en esta acción. Azure lo detecta solo.
 
   close_pull_request_job:
     if: github.event_name == 'pull_request' && github.event.action == 'closed'
@@ -39,5 +36,5 @@ jobs:
       - name: Close Pull Request
         uses: Azure/static-web-apps-deploy@v1
         with:
-          azure_static_web_apps_api_token: ${{ secrets.AZURE_STATIC_WEB_APPS_API_TOKEN_ZEALOUS_ROCK_087CE330F }}
-          action: close
+          azure_static_web_apps_api_token: ${{ secrets.AZURE_STATIC_WEB_APPS_API_TOKEN_ZEALOUS_ROCK_087CE330F }}  # Mismo secreto aquí
+          action: "close"
