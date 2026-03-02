@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="es" style="scroll-behavior: smooth;">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nuestros Productos - studiobycote</title>
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+
+    <!-- Fonts & Icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/productos.css">
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <a href="index.html" class="nav-logo">
+            <img src="https://res.cloudinary.com/dtlpkqhls/image/upload/v1772319697/upscalemedia-transformed_jbbf3w.png"
+                alt="studiobycote">
+        </a>
+        <a href="index.html" class="nav-back-link" style="color: var(--soft); text-decoration: none; font-weight: 500;">
+            <i class="fas fa-arrow-left"></i> Volver al inicio
+        </a>
+    </nav>
+
+    <!-- Header Central -->
+    <header class="productos-page-header">
+        <div class="container">
+            <h1 class="productos-page-title">Nuestros Productos</h1>
+            <p class="productos-page-subtitle">Productos seleccionados para complementar tu bienestar.</p>
+        </div>
+    </header>
+
+    <!-- Modal Lightbox -->
+    <div class="modal-gallery" id="galleryModal">
+        <div class="modal-inner">
+            <button class="modal-close"><i class="fas fa-times"></i></button>
+            <div class="modal-gallery-viewer">
+                <button class="modal-nav modal-prev"><i class="fas fa-chevron-left"></i></button>
+                <img id="modalImage" src="" alt="Vista previa del producto">
+                <button class="modal-nav modal-next"><i class="fas fa-chevron-right"></i></button>
+            </div>
+            <div class="modal-info">
+                <h3 class="modal-product-title" id="modalTitle"></h3>
+                <p class="modal-product-price" id="modalPrice"></p>
+                <p class="modal-product-desc" id="modalDesc"></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- CATÁLOGO -->
+    <section class="section" style="padding-top: 20px; min-height: 80vh;">
+        <div class="container">
+
+            <!-- ═══ BLOQUE A: VELAS DECORATIVAS ═══ -->
+            <h3 class="cat-header"><i class="fas fa-fire"></i> Velas Decorativas</h3>
+            <div class="cat-grid">
+
+                <!-- 1 -->
+                <div class="cat-card-wrap">
+                    <div class="cat-card"
+                        data-images="https://res.cloudinary.com/dtlpkqhls/image/upload/v1772344173/111_spq17h.png,https://res.cloudinary.com/dtlpkqhls/image/upload/v1772344172/2222_wfavcv.png,https://res.cloudinary.com/dtlpkqhls/image/upload/v1772344169/3333_j7wm0e.png"
+                        data-title="Vela aromática frutillas con crema"
+                        data-desc="Hermosa vela tipo postre con diseño de frutillas y crema, aroma a frutos rojos y vainilla. 80 grs | Cera de Soya."
+                        data-price="$10.000 CLP">
+                        <div class="cat-img-box">
+                            <img src="https://res.cloudinary.com/dtlpkqhls/image/upload/v1772344173/111_spq17h.png"
+                                alt="Vela frutillas con crema" loading="lazy">
+                        </div>
+                        <div class="cat-content">
+                            <h4 class="cat-title">Vela aromática frutillas con crema</h4>
+                            <a href="https://wa.me/message/JXGXGJEPIQZSI1?text=Hola%2C%20estoy%20viendo%20el%20producto%3A%20Vela%20arom%C3%A1tica%20frutillas%20con%20crema.%20%C2%BFA%C3%BAn%20est%C3%A1%20disponible%3F"
+                                target="_blank" class="btn-wa-elegante"><i class="fab fa-whatsapp"></i> Contactar por
+                                WhatsApp</a>
+                            <p class="cat-price">$10.000 CLP</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 2 -->
+                <div class="cat-card-wrap">
+                    <div class="cat-card"
+                        data-images="https://res.cloudinary.com/dtlpkqhls/image/upload/v1772344245/1111111111_iyaqlb.png,https://res.cloudinary.com/dtlpkqhls/image/upload/v1772344243/2222222222222_l3rcc2.png,https://res.cloudinary.com/dtlpkqhls/image/upload/v1772344243/333333333333333333333_isadu1.png"
+                        data-title="Vela decorativa en forma de árbol de pino"
+                        data-desc="Vela aromática Crate & Barrel en cera vegetal, forma de árbol de Navidad. 11 cm de diámetro × 33 cm de alto. Color verde. Silueta elegante con detalles intrincados. Majestuosa por sí sola, combina con otros tamaños para crear un bosque encantador."
+                        data-price="$10.000 CLP">
+                        <div class="cat-img-box">
+                            <img src="https://res.cloudinary.com/dtlpkqhls/image/upload/v1772344245/1111111111_iyaqlb.png"
+                                alt="Vela árbol de pino" loading="lazy">
+                        </div>
+                        <div class="cat-content">
+                            <h4 class="cat-title">Vela decorativa en forma de árbol de pino</h4>
+                            <a href="https://wa.me/message/JXGXGJEPIQZSI1?text=Hola%2C%20estoy%20viendo%20el%20producto%3A%20Vela%20decorativa%20en%20forma%20de%20%C3%A1rbol%20de%20pino.%20%C2%BFA%C3%BAn%20est%C3%A1%20disponible%3F"
+                                target="_blank" class="btn-wa-elegante"><i class="fab fa-whatsapp"></i> Contactar por
+                                WhatsApp</a>
+                            <p class="cat-price">$10.000 CLP</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 3 -->
+                <div class="cat-card-wrap">
+                    <div class="cat-card"
+                        data-images="https://res.cloudinary.com/dtlpkqhls/image/upload/v1772344293/WhatsApp-Image-2022-07-27-at-16.50.31-1_o1w3bc.jpg,https://res.cloudinary.com/dtlpkqhls/image/upload/v1772344296/WhatsApp-Image-2022-07-27-at-16.50.30-7_zi6fzd.jpg"
+                        data-title="Vela decorativa de busto de mujer (Venus)"
+                        data-desc="Vela de Soja natural hecha a mano en Barcelona. Pieza decorativa única. 21 cm alto × 9 cm ancho. Color blanco. El proceso de fabricación está hecho todo a mano, con amor, ilusión y dedicación. «Pide un deseo» al encender la vela. No quemes más de 3 horas seguidas."
+                        data-price="$10.000 CLP">
+                        <div class="cat-img-box">
+                            <img src="https://res.cloudinary.com/dtlpkqhls/image/upload/v1772344293/WhatsApp-Image-2022-07-27-at-16.50.31-1_o1w3bc.jpg"
+                                alt="Vela busto Venus" loading="lazy">
+                        </div>
+                        <div class="cat-content">
+                            <h4 class="cat-title">Vela decorativa de busto de mujer (Venus)</h4>
+                            <a href="https://wa.me/message/JXGXGJEPIQZSI1?text=Hola%2C%20estoy%20viendo%20el%20producto%3A%20Vela%20decorativa%20de%20busto%20de%20mujer%20%28Venus%29.%20%C2%BFA%C3%BAn%20est%C3%A1%20disponible%3F"
+                                target="_blank" class="btn-wa-elegante"><i class="fab fa-whatsapp"></i> Contactar por
+                                WhatsApp</a>
+                            <p class="cat-price">$10.000 CLP</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 4 -->
+                <div class="cat-card-wrap">
+                    <div class="cat-card"
+                        data-images="https://res.cloudinary.com/dtlpkqhls/image/upload/v1772344391/55555555555555_ozbjh8.png,https://res.cloudinary.com/dtlpkqhls/image/upload/v1772344393/444444444444444_vdifj3.png,https://res.cloudinary.com/dtlpkqhls/image/upload/v1772344388/666666666666_cmg12o.png"
+                        data-title="Vela decorativa en forma de oso Teddy"
+                        data-desc="Vela Oso Teddy 🧸 Tamaño Chico (6.5 × 4.5 cm). Ideal para souvenirs y regalos especiales."
+                        data-price="$10.000 CLP">
+                        <div class="cat-img-box">
+                            <img src="https://res.cloudinary.com/dtlpkqhls/image/upload/v1772344391/55555555555555_ozbjh8.png"
+                                alt="Vela oso Teddy" loading="lazy">
+                        </div>
+                        <div class="cat-content">
+                            <h4 class="cat-title">Vela decorativa en forma de oso Teddy</h4>
+                            <a href="https://wa.me/message/JXGXGJEPIQZSI1?text=Hola%2C%20estoy%20viendo%20el%20producto%3A%20Vela%20decorativa%20en%20forma%20de%20oso%20Teddy.%20%C2%BFA%C3%BAn%20est%C3%A1%20disponible%3F"
+                                target="_blank" class="btn-wa-elegante"><i class="fab fa-whatsapp"></i> Contactar por
+                                WhatsApp</a>
+                            <p class="cat-price">$10.000 CLP</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ═══ BLOQUE B: AROMAS & DIFUSORES ═══ -->
+            <h3 class="cat-header"><i class="fas fa-wind"></i> Aromas & Difusores</h3>
+            <div class="cat-grid">
+
+                <!-- 5 -->
+                <div class="cat-card-wrap">
+                    <div class="cat-card"
+                        data-images="https://res.cloudinary.com/dtlpkqhls/image/upload/v1772344486/5555555555555555555555555555555555555555555555_bw1r4p.png"
+                        data-title="Wax Melts barra de chocolate"
+                        data-desc="Cera aromática para derretir con intenso aroma a cacao. Presentación en forma de barra de chocolate."
+                        data-price="$7.000 CLP">
+                        <div class="cat-img-box">
+                            <img src="https://res.cloudinary.com/dtlpkqhls/image/upload/v1772344486/5555555555555555555555555555555555555555555555_bw1r4p.png"
+                                alt="Wax Melts" loading="lazy">
+                        </div>
+                        <div class="cat-content">
+                            <h4 class="cat-title">Wax Melts barra de chocolate</h4>
+                            <a href="https://wa.me/message/JXGXGJEPIQZSI1?text=Hola%2C%20estoy%20viendo%20el%20producto%3A%20Wax%20Melts%20barra%20de%20chocolate.%20%C2%BFA%C3%BAn%20est%C3%A1%20disponible%3F"
+                                target="_blank" class="btn-wa-elegante"><i class="fab fa-whatsapp"></i> Contactar por
+                                WhatsApp</a>
+                            <p class="cat-price">$7.000 CLP</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 6 -->
+                <div class="cat-card-wrap">
+                    <div class="cat-card"
+                        data-images="https://res.cloudinary.com/dtlpkqhls/image/upload/v1772344572/gergergegeg_cbghvb.png,https://res.cloudinary.com/dtlpkqhls/image/upload/v1772344598/ggwrgg34g34g34_tcx0qb.png"
+                        data-title="Quemador de cerámica con diseño de búho"
+                        data-desc="Quemador rústico de terracota con acabado artesanal. Ideal para aceites esenciales, gránulos aromáticos o ceras perfumadas. Colores surtidos, cada pieza tiene su propio carácter único. Coloca agua en el recipiente superior, añade unas gotas de tu aceite esencial favorito y enciende una vela de té en la base."
+                        data-price="$7.000 CLP">
+                        <div class="cat-img-box">
+                            <img src="https://res.cloudinary.com/dtlpkqhls/image/upload/v1772344572/gergergegeg_cbghvb.png"
+                                alt="Quemador búho" loading="lazy">
+                        </div>
+                        <div class="cat-content">
+                            <h4 class="cat-title">Quemador de cerámica con diseño de búho</h4>
+                            <a href="https://wa.me/message/JXGXGJEPIQZSI1?text=Hola%2C%20estoy%20viendo%20el%20producto%3A%20Quemador%20de%20cer%C3%A1mica%20con%20dise%C3%B1o%20de%20b%C3%BAho.%20%C2%BFA%C3%BAn%20est%C3%A1%20disponible%3F"
+                                target="_blank" class="btn-wa-elegante"><i class="fab fa-whatsapp"></i> Contactar por
+                                WhatsApp</a>
+                            <p class="cat-price">$7.000 CLP</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 7 -->
+                <div class="cat-card-wrap">
+                    <div class="cat-card"
+                        data-images="https://res.cloudinary.com/dtlpkqhls/image/upload/v1772344671/erg3hg45hy45yh45y546565656_znfaux.png,https://res.cloudinary.com/dtlpkqhls/image/upload/v1772344668/5j56j56j566465653534535_uuburn.png"
+                        data-title="Portavelas de cerámica en forma de casita blanca"
+                        data-desc="Encantador portavela en forma de casa de metal robusto. Medidas: 7.8 × 17.2 × 9 cm | 198 g. Puedes colgar los portavelas y crear un ambiente aireado y animado, perfecto para los cálidos días de verano."
+                        data-price="$7.000 CLP">
+                        <div class="cat-img-box">
+                            <img src="https://res.cloudinary.com/dtlpkqhls/image/upload/v1772344671/erg3hg45hy45yh45y546565656_znfaux.png"
+                                alt="Portavelas casita" loading="lazy">
+                        </div>
+                        <div class="cat-content">
+                            <h4 class="cat-title">Portavelas de cerámica en forma de casita blanca</h4>
+                            <a href="https://wa.me/message/JXGXGJEPIQZSI1?text=Hola%2C%20estoy%20viendo%20el%20producto%3A%20Portavelas%20de%20cer%C3%A1mica%20en%20forma%20de%20casita%20blanca.%20%C2%BFA%C3%BAn%20est%C3%A1%20disponible%3F"
+                                target="_blank" class="btn-wa-elegante"><i class="fab fa-whatsapp"></i> Contactar por
+                                WhatsApp</a>
+                            <p class="cat-price">$7.000 CLP</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 8 -->
+                <div class="cat-card-wrap">
+                    <div class="cat-card"
+                        data-images="https://res.cloudinary.com/dtlpkqhls/image/upload/v1772344738/glrdkjgdropiugjhrds9p8gu3409q870398475_zagbm9.png"
+                        data-title="Quemador de cerámica con diseño de corazones"
+                        data-desc="Elegante difusor que combina aromas y luz cálida. Perfecto para crear ambientes mágicos y románticos, ideal para momentos especiales o para añadir un toque decorativo único a cualquier espacio de tu hogar."
+                        data-price="$7.000 CLP">
+                        <div class="cat-img-box">
+                            <img src="https://res.cloudinary.com/dtlpkqhls/image/upload/v1772344738/glrdkjgdropiugjhrds9p8gu3409q870398475_zagbm9.png"
+                                alt="Quemador corazones" loading="lazy">
+                        </div>
+                        <div class="cat-content">
+                            <h4 class="cat-title">Quemador de cerámica con diseño de corazones</h4>
+                            <a href="https://wa.me/message/JXGXGJEPIQZSI1?text=Hola%2C%20estoy%20viendo%20el%20producto%3A%20Quemador%20de%20cer%C3%A1mica%20con%20dise%C3%B1o%20de%20corazones.%20%C2%BFA%C3%BAn%20est%C3%A1%20disponible%3F"
+                                target="_blank" class="btn-wa-elegante"><i class="fab fa-whatsapp"></i> Contactar por
+                                WhatsApp</a>
+                            <p class="cat-price">$7.000 CLP</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 9 -->
+                <div class="cat-card-wrap">
+                    <div class="cat-card"
+                        data-images="https://res.cloudinary.com/dtlpkqhls/image/upload/v1772344777/hwrthw4egyt34r5t434444444444_kopb3a.png"
+                        data-title="Difusor aromatizante para auto"
+                        data-desc="Frasco de vidrio de 8 ml con tapa de madera permeable y cordón. Incluye contratapa para evitar derrames. Perfecto para llevar tu aroma favorito en viaje."
+                        data-price="$7.000 CLP">
+                        <div class="cat-img-box">
+                            <img src="https://res.cloudinary.com/dtlpkqhls/image/upload/v1772344777/hwrthw4egyt34r5t434444444444_kopb3a.png"
+                                alt="Difusor auto" loading="lazy">
+                        </div>
+                        <div class="cat-content">
+                            <h4 class="cat-title">Difusor aromatizante para auto</h4>
+                            <a href="https://wa.me/message/JXGXGJEPIQZSI1?text=Hola%2C%20estoy%20viendo%20el%20producto%3A%20Difusor%20aromatizante%20para%20auto%20%28vidrio%20%2B%20tapa%20madera%29.%20%C2%BFA%C3%BAn%20est%C3%A1%20disponible%3F"
+                                target="_blank" class="btn-wa-elegante"><i class="fab fa-whatsapp"></i> Contactar por
+                                WhatsApp</a>
+                            <p class="cat-price">$7.000 CLP</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 10 -->
+                <div class="cat-card-wrap">
+                    <div class="cat-card"
+                        data-images="https://res.cloudinary.com/dtlpkqhls/image/upload/v1772344828/eeeeeeeeeeeeeee_xlbyae.png"
+                        data-title="Aromatizante textil y ambiental"
+                        data-desc="Saphirus 250 ml. Fórmula concentrada que elimina olores y proporciona frescura duradera. Ideal para cortinas, sofás, ropa de cama y cualquier tipo de textil. Fácil aplicación con distribución uniforme."
+                        data-price="$7.000 CLP">
+                        <div class="cat-img-box">
+                            <img src="https://res.cloudinary.com/dtlpkqhls/image/upload/v1772344828/eeeeeeeeeeeeeee_xlbyae.png"
+                                alt="Aromatizante textil" loading="lazy">
+                        </div>
+                        <div class="cat-content">
+                            <h4 class="cat-title">Aromatizante textil y ambiental</h4>
+                            <a href="https://wa.me/message/JXGXGJEPIQZSI1?text=Hola%2C%20estoy%20viendo%20el%20producto%3A%20Aromatizante%20textil%20y%20ambiental%20%28botella%20negra%20opaca%29.%20%C2%BFA%C3%BAn%20est%C3%A1%20disponible%3F"
+                                target="_blank" class="btn-wa-elegante"><i class="fab fa-whatsapp"></i> Contactar por
+                                WhatsApp</a>
+                            <p class="cat-price">$7.000 CLP</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ═══ BLOQUE C: CUIDADO PERSONAL ═══ -->
+            <h3 class="cat-header"><i class="fas fa-spa"></i> Cuidado Personal</h3>
+            <div class="cat-grid">
+
+                <!-- 11 -->
+                <div class="cat-card-wrap">
+                    <div class="cat-card"
+                        data-images="https://res.cloudinary.com/dtlpkqhls/image/upload/v1772344883/efsefse9f8se0_f98es_09f8se_90f8esf_sgldwf.png"
+                        data-title="Talco desodorante antimicótico"
+                        data-desc="Talco clásico micropulverizado de alta pureza. Hipoalergénico, 200 g. Mantiene la piel siempre seca y fresca. Fórmula exclusiva que protege y evita irritaciones. Talquera recargable."
+                        data-price="$15.000 CLP">
+                        <div class="cat-img-box">
+                            <img src="https://res.cloudinary.com/dtlpkqhls/image/upload/v1772344883/efsefse9f8se0_f98es_09f8se_90f8esf_sgldwf.png"
+                                alt="Talco antimicótico" loading="lazy">
+                        </div>
+                        <div class="cat-content">
+                            <h4 class="cat-title">Talco desodorante antimicótico</h4>
+                            <a href="https://wa.me/message/JXGXGJEPIQZSI1?text=Hola%2C%20estoy%20viendo%20el%20producto%3A%20Talco%20desodorante%20antimic%C3%B3tico.%20%C2%BFA%C3%BAn%20est%C3%A1%20disponible%3F"
+                                target="_blank" class="btn-wa-elegante"><i class="fab fa-whatsapp"></i> Contactar por
+                                WhatsApp</a>
+                            <p class="cat-price">$15.000 CLP</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 12 -->
+                <div class="cat-card-wrap">
+                    <div class="cat-card"
+                        data-images="https://res.cloudinary.com/dtlpkqhls/image/upload/v1772344933/34t44444444444444_mk1h7v.png"
+                        data-title="Espuma mi primer baño Simonds"
+                        data-desc="Espuma suave de 170 ml para piel sensible. Hipoalergénica, genera espuma abundante que limpia, calma y nutre. Ideal para los más pequeños. Transforma la rutina diaria en un momento de alegría y juego."
+                        data-price="$15.000 CLP">
+                        <div class="cat-img-box">
+                            <img src="https://res.cloudinary.com/dtlpkqhls/image/upload/v1772344933/34t44444444444444_mk1h7v.png"
+                                alt="Espuma Simonds" loading="lazy">
+                        </div>
+                        <div class="cat-content">
+                            <h4 class="cat-title">Espuma mi primer baño Simonds</h4>
+                            <a href="https://wa.me/message/JXGXGJEPIQZSI1?text=Hola%2C%20estoy%20viendo%20el%20producto%3A%20Espuma%20mi%20primer%20ba%C3%B1o%20Simonds.%20%C2%BFA%C3%BAn%20est%C3%A1%20disponible%3F"
+                                target="_blank" class="btn-wa-elegante"><i class="fab fa-whatsapp"></i> Contactar por
+                                WhatsApp</a>
+                            <p class="cat-price">$15.000 CLP</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer" id="contacto" style="margin-top: 50px;">
+        <div class="container footer-content">
+            <div class="footer-about">
+                <img src="https://res.cloudinary.com/dtlpkqhls/image/upload/v1772319697/upscalemedia-transformed_jbbf3w.png"
+                    alt="studiobycote" style="height: 60px; margin-bottom: 15px; width: auto; object-fit: contain;">
+                <p>Especialistas en resaltar tu belleza natural con técnicas de vanguardia y productos premium.</p>
+            </div>
+            <div class="footer-links">
+                <h4>Enlaces Útiles</h4>
+                <ul>
+                    <li><a href="index.html#servicios">Servicios</a></li>
+                    <li><a href="index.html#resultados">Resultados</a></li>
+                    <li><a href="tarjeta.html">Tarjeta Digital</a></li>
+                    <li><a href="terminos.html">Términos y Condiciones</a></li>
+                    <li><a href="index.html" class="open-reserva">Reservar Cita</a></li>
+                </ul>
+            </div>
+            <div class="footer-social">
+                <h4>Síguenos</h4>
+                <div class="social-icons">
+                    <a href="https://www.instagram.com/studiobycote/" target="_blank"><i
+                            class="fab fa-instagram"></i></a>
+                    <a href="https://www.tiktok.com/@studiobycote" target="_blank"><i class="fab fa-tiktok"></i></a>
+                    <a href="https://wa.me/message/JXGXGJEPIQZSI1" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 studiobycote. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/productos.js"></script>
+</body>
+
+</html>

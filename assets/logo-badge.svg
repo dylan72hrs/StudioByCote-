@@ -1,0 +1,32 @@
+<svg width="400" height="400" viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <filter id="neonGlowCircle" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="5" result="blur" />
+      <feComponentTransfer in="blur" result="glow">
+        <feFuncA type="linear" slope="1.5" />
+      </feComponentTransfer>
+      <feMerge>
+        <feMergeNode in="glow" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+  </defs>
+  <!-- Background specifically for social profile (optional to use transparent, but let's make it deep purple) -->
+  <rect width="400" height="400" fill="#3D0F3C" />
+  
+  <circle cx="200" cy="200" r="170" fill="none" stroke="#9D1C8F" stroke-width="6" filter="url(#neonGlowCircle)"/>
+  <circle cx="200" cy="200" r="150" fill="none" stroke="#DEA3D4" stroke-width="2" opacity="0.6"/>
+  
+  <text x="200" y="220" font-family="'Montserrat', sans-serif" font-size="80" font-weight="700" fill="#FFFFFF" text-anchor="middle" filter="url(#neonGlowCircle)">
+    SC
+  </text>
+  <text x="200" y="275" font-family="'Montserrat', sans-serif" font-size="18" font-weight="300" fill="#DEA3D4" letter-spacing="4" text-anchor="middle">
+    BEAUTY STUDIO
+  </text>
+  
+  <!-- Subtle decoration -->
+  <g filter="url(#neonGlowCircle)" transform="translate(180, 110)">
+    <path d="M 20 0 C -10 0, -20 20, 0 40 C -10 20, 0 10, 20 0 Z" fill="#9D1C8F"/>
+    <path d="M 25 10 C 35 10, 45 25, 30 40 C 35 25, 30 15, 25 10 Z" fill="#DEA3D4"/>
+  </g>
+</svg>

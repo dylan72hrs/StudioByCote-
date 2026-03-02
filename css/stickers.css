@@ -1,0 +1,247 @@
+/* ============================================
+   STICKERS DECORATIVOS (NO MODIFICAR ESTRUCTURA)
+   ============================================ */
+.st-decor {
+    position: absolute;
+    pointer-events: none;
+    z-index: 0;
+    filter: drop-shadow(0 0 25px rgba(255, 255, 255, 0.4)) drop-shadow(0 15px 30px rgba(0, 0, 0, 0.8));
+    object-fit: contain;
+    -webkit-mask-image: radial-gradient(circle at center, rgba(0, 0, 0, 1) 50%, rgba(0, 0, 0, 0) 90%);
+    mask-image: radial-gradient(circle at center, rgba(0, 0, 0, 1) 50%, rgba(0, 0, 0, 0) 90%);
+}
+
+.st-a {
+    /* Equipo right top */
+    top: -50px;
+    right: 2%;
+    width: 25vw;
+    max-width: 320px;
+    transform: rotate(15deg);
+    opacity: 0.85;
+}
+
+.st-b {
+    /* Equipo left */
+    top: 25%;
+    left: -20px;
+    width: 20vw;
+    max-width: 250px;
+    transform: rotate(-10deg);
+    opacity: 0.75;
+}
+
+.st-c {
+    /* Servicios left top */
+    top: -50px;
+    left: 2%;
+    width: 22vw;
+    max-width: 280px;
+    transform: rotate(-25deg);
+    opacity: 0.85;
+}
+
+.st-d {
+    /* Resultados right top */
+    top: -10px;
+    right: 2%;
+    width: 30vw;
+    max-width: 380px;
+    transform: rotate(20deg);
+    opacity: 0.85;
+}
+
+.st-e {
+    /* Opiniones/Ubicacion transition right */
+    bottom: -60px;
+    right: -20px;
+    width: 32vw;
+    max-width: 400px;
+    transform: rotate(-15deg);
+    opacity: 0.9;
+}
+
+.st-f {
+    /* Footer right large */
+    top: 10%;
+    right: 5%;
+    width: 28vw;
+    max-width: 360px;
+    transform: rotate(10deg);
+    opacity: 0.85;
+}
+
+/* Responsivo y no intrusivo en Moviles */
+@media(max-width: 768px) {
+    .st-decor {
+        opacity: 0.45;
+    }
+
+    .st-a {
+        right: -10vw;
+        width: 40vw;
+    }
+
+    .st-b {
+        left: -15vw;
+        width: 35vw;
+    }
+
+    .st-c {
+        left: -10vw;
+        width: 35vw;
+    }
+
+    .st-d {
+        right: -15vw;
+        width: 40vw;
+    }
+
+    .st-e {
+        right: -20vw;
+        bottom: 0;
+        width: 45vw;
+    }
+
+    .st-f {
+        right: -10vw;
+        top: 30%;
+        width: 40vw;
+    }
+}
+
+/* ============================================
+   NUEVOS STICKERS SOLICITADOS (EQUIPO-RIGHT y RESULTADOS-LEFT)
+   ============================================ */
+/* Asegura contexto para posicionar stickers dentro de cada sección */
+#equipo .container,
+#resultados .container {
+    position: relative;
+}
+
+/* Base sticker */
+.sticker {
+    position: absolute;
+    pointer-events: none;
+    user-select: none;
+    z-index: 3;
+    opacity: 0.95;
+    transform: rotate(-3deg);
+    filter: drop-shadow(0 12px 28px rgba(0, 0, 0, .45));
+
+    /* “Borde invisible” / feather */
+    -webkit-mask-image: radial-gradient(circle at center, #000 62%, transparent 100%);
+    mask-image: radial-gradient(circle at center, #000 62%, transparent 100%);
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+}
+
+/* Sticker 1: equipo-right (vacío derecho de “Nuestro Equipo”) */
+.sticker--equipo-right {
+    width: clamp(160px, 18vw, 280px);
+    right: -240px;
+    /* levemente hacia afuera, como decor */
+    top: 52%;
+    /* altura media (ajustable fino) */
+    transform: translateY(-50%) rotate(6deg);
+    opacity: 0.9;
+}
+
+/* Sticker 2: resultados-left (vacío izquierdo de “Nuestros Resultados”) */
+.sticker--resultados-left {
+    width: clamp(170px, 20vw, 320px);
+    left: -240px;
+    /* levemente hacia afuera */
+    top: 46%;
+    /* cerca de título+grid */
+    transform: translateY(-50%) rotate(-7deg);
+    opacity: 0.9;
+}
+
+/* Responsive: evitar que tapen contenido en mobile */
+@media (max-width: 768px) {
+    .sticker {
+        opacity: 0.55;
+        filter: drop-shadow(0 10px 20px rgba(0, 0, 0, .35));
+    }
+
+    .sticker--equipo-right {
+        right: -90px;
+        top: 70%;
+        width: 180px;
+    }
+
+    .sticker--resultados-left {
+        left: -90px;
+        top: 28%;
+        width: 190px;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .sticker--equipo-right,
+    .sticker--resultados-left {
+        width: 150px;
+    }
+}
+
+/* Sticker nuevo entre “Ver más en Instagram” y “Nuestro Espacio” */
+.sticker--insta-espacio-right {
+    position: absolute;
+    right: -320px;
+    top: 78%;
+    width: 20%;
+    max-width: 320px;
+    min-width: 240px;
+    height: auto;
+    z-index: 2;
+    pointer-events: none;
+
+    /* borde suave tipo sticker sin borde duro */
+    filter: drop-shadow(0 14px 40px rgba(0, 0, 0, .45));
+    -webkit-mask-image: radial-gradient(circle at center, #000 62%, rgba(0, 0, 0, 0) 74%);
+    mask-image: radial-gradient(circle at center, #000 62%, rgba(0, 0, 0, 0) 74%);
+
+    /* 🔴 sin animación */
+    transform: rotate(-6deg);
+}
+
+@media (max-width: 768px) {
+    .sticker--insta-espacio-right {
+        right: -120px;
+        top: 82%;
+        width: 46%;
+        max-width: 260px;
+        min-width: 200px;
+    }
+}
+
+/* Sticker Venus rosada — espejo izquierdo del busto blanco */
+.sticker--espacio-left-venus {
+    position: absolute;
+    left: -320px;
+    top: 78%;
+    width: 20%;
+    max-width: 320px;
+    min-width: 240px;
+    height: auto;
+    z-index: 2;
+    pointer-events: none;
+
+    filter: drop-shadow(0 14px 40px rgba(0, 0, 0, .45));
+    -webkit-mask-image: radial-gradient(circle at center, #000 62%, rgba(0, 0, 0, 0) 74%);
+    mask-image: radial-gradient(circle at center, #000 62%, rgba(0, 0, 0, 0) 74%);
+
+    transform: rotate(6deg);
+}
+
+@media (max-width: 768px) {
+    .sticker--espacio-left-venus {
+        left: -120px;
+        top: 82%;
+        width: 46%;
+        max-width: 260px;
+        min-width: 200px;
+    }
+}

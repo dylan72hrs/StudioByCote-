@@ -1,0 +1,774 @@
+<!DOCTYPE html>
+<html lang="es" style="scroll-behavior: smooth;">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>studiobycote - Beauty Studio</title>
+    <!-- Security Headers (Meta-based) -->
+    <meta http-equiv="Content-Security-Policy"
+        content="default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://cdnjs.cloudflare.com https://cdn.jsdelivr.net; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdnjs.cloudflare.com https://cdn.jsdelivr.net; font-src 'self' https://fonts.gstatic.com https://cdnjs.cloudflare.com; img-src 'self' data: https:; media-src 'self' https:; frame-src 'self' https://www.google.com; connect-src 'self' https://n8nstudio-b9afe5bvcue9e5gv.brazilsouth-01.azurewebsites.net; object-src 'none'; base-uri 'self';">
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;800&display=swap"
+        rel="stylesheet">
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Flatpickr (Neon Datepicker base) -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/themes/dark.css">
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/stickers.css">
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <a href="#" class="nav-logo">
+            <img src="https://res.cloudinary.com/dtlpkqhls/image/upload/v1772319697/upscalemedia-transformed_jbbf3w.png"
+                alt="studiobycote">
+        </a>
+        <div class="menu-toggle" id="mobile-menu">
+            <i class="fas fa-bars"></i>
+        </div>
+        <ul class="nav-links">
+            <li><a href="#equipo">Equipo</a></li>
+            <li><a href="#servicios">Servicios</a></li>
+            <li><a href="#resultados">Resultados</a></li>
+            <li><a href="productos.html" target="_blank" rel="noopener">Productos</a></li>
+            <li><a href="#opiniones">Opiniones</a></li>
+            <li><a href="#ubicacion">Ubicación</a></li>
+            <li><a href="reserva.html" class="btn-primary"
+                    style="padding:8px 20px; border-radius:25px; font-size:0.9rem;">Reservar</a></li>
+        </ul>
+    </nav>
+
+    <!-- Floating WhatsApp -->
+    <a href="https://wa.me/message/JXGXGJEPIQZSI1" target="_blank" class="float-wa">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Header / Hero -->
+    <header class="hero" id="home">
+        <video class="hero-bg-video" autoplay loop muted playsinline disablePictureInPicture controlslist="nodownload"
+            preload="metadata">
+            <source
+                src="https://res.cloudinary.com/dtlpkqhls/video/upload/v1772329134/grok-video-a58e8eeb-add0-44a5-9e2f-8fb29a64f0a3_pejk0p.mp4"
+                type="video/mp4">
+        </video>
+
+
+
+        <!-- Parallax Layer: Foreground Content -->
+        <div class="hero-content hero-foreground" id="hero-content">
+            <img src="https://res.cloudinary.com/dtlpkqhls/image/upload/v1772319697/upscalemedia-transformed_jbbf3w.png"
+                alt="studiobycote" class="hero-badge">
+            <h1 class="hero-title">Realza tu belleza natural</h1>
+            <p class="hero-subtitle">Especialistas en cejas, pestañas, labios y más.</p>
+            <div class="hero-cta">
+                <a href="reserva.html" class="btn-primary">Reservar Ahora</a>
+                <a href="https://wa.me/message/JXGXGJEPIQZSI1" target="_blank" class="btn-secondary"><i
+                        class="fab fa-whatsapp"></i> WhatsApp</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Nuestro Equipo -->
+    <section class="section team-section" id="equipo" style="position: relative;">
+        <!-- Stickers Equipo A & B -->
+        <img src="https://res.cloudinary.com/dtlpkqhls/image/upload/v1772333543/god_vives_1_xr16rm.png"
+            class="st-decor st-a" alt="" aria-hidden="true">
+        <img src="https://res.cloudinary.com/dtlpkqhls/image/upload/v1772333263/astetic_brocha_1_xhbkl6.png"
+            class="st-decor st-b" alt="" aria-hidden="true">
+        <div class="container">
+            <img class="sticker sticker--equipo-right"
+                src="https://res.cloudinary.com/dtlpkqhls/image/upload/v1772336364/wdwdwd_1_sqfqhx.png" alt=""
+                aria-hidden="true" />
+            <h2 class="section-title text-center">Nuestro Equipo</h2>
+            <p class="text-center mb-4 text-soft text-lg">Trabajamos con hora previamente agendada y solicitamos abono
+                para reservar,<br>ya que cada cita es personalizada y exclusiva.</p>
+            <div class="mj-layout">
+                <div class="mj-image-col">
+                    <img src="https://res.cloudinary.com/dtlpkqhls/image/upload/v1772332273/Use_the_uploaded_image_as_the_base_referenceimport_delpmaspu_1_o3awgf.png"
+                        alt="María José">
+                </div>
+                <div class="mj-info-col">
+                    <h3>María José</h3>
+                    <h4>Founder & Especialista</h4>
+                    <p class="mj-bio">Apasionada por realzar la belleza natural, con amplia experiencia en técnicas
+                        avanzadas y vanguardistas para brindar resultados perfectos y armónicos.</p>
+                    <div class="certifications">
+                        <h5 style="color: #fff; margin-bottom: 15px; font-size: 1.1rem;">Especialidades:</h5>
+                        <ul>
+                            <li><i class="fas fa-check-circle"></i> Micropigmentación Avanzada de Cejas y Labios</li>
+                            <li><i class="fas fa-check-circle"></i> Tratamientos Faciales Premium</li>
+                            <li><i class="fas fa-check-circle"></i> Lifting y Perfilado de Pestañas</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="trust-block">
+                <i class="fas fa-shield-alt trust-icon"></i>
+                <h4 class="trust-title">Compromiso con tu seguridad ✨</h4>
+                <p class="trust-text">
+                    No reutilizamos productos.<br>
+                    Todo el material es nuevo y se abre delante tuyo.<br>
+                    Cada herramienta está sellada y trabajamos bajo protocolos 100% profesionales de higiene y
+                    seguridad.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Servicios y Precios -->
+    <section class="section services-section" id="servicios" style="position: relative;">
+        <!-- Sticker C -->
+        <img src="https://res.cloudinary.com/dtlpkqhls/image/upload/v1772333302/brocha_arena_-Photoroom_fsbqp0.png"
+            class="st-decor st-c" alt="" aria-hidden="true">
+        <div class="container" style="max-width: 100%; overflow: hidden; position: relative;">
+            <div class="section-title-wrapper text-center">
+                <h2 class="section-title text-center" style="margin-bottom: 10px;">Nuestros Servicios</h2>
+                <div class="slide-indicator" id="slide-indicator">01 / 06</div>
+            </div>
+
+            <!-- Swiper Showcase -->
+            <div class="swiper product-swiper">
+                <div class="swiper-wrapper">
+
+                    <!-- 1: Micropigmentación -->
+                    <div class="swiper-slide product-slide" data-glow="#9D1C8F" data-id="micro">
+                        <div class="product-card">
+                            <div class="pc-media"
+                                style="background-image:url('https://res.cloudinary.com/dtlpkqhls/image/upload/v1772257425/CEJASSSS_anpteu.png');">
+                                <div class="pc-burn"></div>
+                            </div>
+                            <div class="pc-content">
+                                <div class="pc-body">
+                                    <h3>Micropigmentación</h3>
+                                    <p class="pc-desc">Realza y define con un resultado natural.</p>
+                                </div>
+                                <div class="pc-footer">
+                                    <p class="pc-price">Desde <strong>$100.000</strong></p>
+                                    <a href="reserva.html?service=micro" class="pc-cta"
+                                        onclick="event.stopPropagation();">Reservar <i
+                                            class="fas fa-arrow-right"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 2: Cejas -->
+                    <div class="swiper-slide product-slide" data-glow="#DEA3D4" data-id="cejas">
+                        <div class="product-card">
+                            <div class="pc-media"
+                                style="background-image:url('https://res.cloudinary.com/dtlpkqhls/image/upload/v1772257420/CEJAS_lztlgb.png');">
+                                <div class="pc-burn"></div>
+                            </div>
+                            <div class="pc-content">
+                                <div class="pc-body">
+                                    <h3>Cejas</h3>
+                                    <p class="pc-desc">Diseño y definición para enmarcar tu mirada.</p>
+                                </div>
+                                <div class="pc-footer">
+                                    <p class="pc-price">Desde <strong>$10.000</strong></p>
+                                    <a href="reserva.html?service=cejas" class="pc-cta"
+                                        onclick="event.stopPropagation();">Reservar <i
+                                            class="fas fa-arrow-right"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 3: Pestañas -->
+                    <div class="swiper-slide product-slide" data-glow="#641A63" data-id="pestanas">
+                        <div class="product-card">
+                            <div class="pc-media"
+                                style="background-image:url('https://res.cloudinary.com/dtlpkqhls/image/upload/v1772257420/LIFTING_g3nn9k.png');">
+                                <div class="pc-burn"></div>
+                            </div>
+                            <div class="pc-content">
+                                <div class="pc-body">
+                                    <h3>Pestañas</h3>
+                                    <p class="pc-desc">Efecto de mirada más abierta y definida.</p>
+                                </div>
+                                <div class="pc-footer">
+                                    <p class="pc-price">Desde <strong>$20.000</strong></p>
+                                    <a href="reserva.html?service=pestanas" class="pc-cta"
+                                        onclick="event.stopPropagation();">Reservar <i
+                                            class="fas fa-arrow-right"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 4: Tratamientos Faciales -->
+                    <div class="swiper-slide product-slide" data-glow="#b164ff" data-id="faciales">
+                        <div class="product-card">
+                            <div class="pc-media"
+                                style="background-image:url('https://res.cloudinary.com/dtlpkqhls/image/upload/v1772257421/ALGAS_cgcs6x.png');">
+                                <div class="pc-burn"></div>
+                            </div>
+                            <div class="pc-content">
+                                <div class="pc-body">
+                                    <h3>Tratamientos Faciales</h3>
+                                    <p class="pc-desc">Limpieza e hidratación para tu piel.</p>
+                                </div>
+                                <div class="pc-footer">
+                                    <p class="pc-price">Desde <strong>$25.000</strong></p>
+                                    <a href="reserva.html?service=faciales" class="pc-cta"
+                                        onclick="event.stopPropagation();">Reservar <i
+                                            class="fas fa-arrow-right"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 5: Uñas -->
+                    <div class="swiper-slide product-slide" data-glow="#ff65a3" data-id="unas">
+                        <div class="product-card">
+                            <div class="pc-media"
+                                style="background-image:url('https://res.cloudinary.com/dtlpkqhls/image/upload/v1772257423/U%C3%91AS_POLY_faa6kc.png');">
+                                <div class="pc-burn"></div>
+                            </div>
+                            <div class="pc-content">
+                                <div class="pc-body">
+                                    <h3>Uñas</h3>
+                                    <p class="pc-desc">Manicure y esmaltado con acabado prolijo.</p>
+                                </div>
+                                <div class="pc-footer">
+                                    <p class="pc-price">Desde <strong>$10.000</strong></p>
+                                    <a href="reserva.html?service=unas" class="pc-cta"
+                                        onclick="event.stopPropagation();">Reservar <i
+                                            class="fas fa-arrow-right"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 6: Fish Spa -->
+                    <div class="swiper-slide product-slide" data-glow="#35D07F" data-id="fish">
+                        <div class="product-card">
+                            <div class="pc-media"
+                                style="background-image:url('https://res.cloudinary.com/dtlpkqhls/image/upload/v1772341500/spa_fich_qkrvaa.png');">
+                                <div class="pc-burn"></div>
+                            </div>
+                            <div class="pc-content">
+                                <div class="pc-body">
+                                    <h3>Fish Spa</h3>
+                                    <p class="pc-desc">Experiencia de exfoliación suave.</p>
+                                </div>
+                                <div class="pc-footer">
+                                    <p class="pc-price"><strong>$10.000</strong></p>
+                                    <a href="reserva.html?service=fish" class="pc-cta"
+                                        onclick="event.stopPropagation();">Reservar <i
+                                            class="fas fa-arrow-right"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Custom Arrows + Pagination -->
+                <div class="product-swiper-controls">
+                    <button class="swiper-button-prev pc-arrow" aria-label="Anterior">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="15 18 9 12 15 6"></polyline>
+                        </svg>
+                    </button>
+                    <div class="swiper-pagination"></div>
+                    <button class="swiper-button-next pc-arrow" aria-label="Siguiente">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="9 6 15 12 9 18"></polyline>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+
+            <!-- CTA Global -->
+            <div class="text-center mt-4">
+                <a href="reserva.html" class="btn-primary"
+                    style="font-size:1.1rem; padding: 12px 30px; margin-top: 20px; display: inline-flex; align-items: center; gap: 10px;">
+                    <i class="fas fa-calendar-alt"></i> Agendar Directo
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Resultados -->
+    <section class="section experiences-section" id="resultados" style="position: relative;">
+        <!-- Sticker D -->
+        <img src="https://res.cloudinary.com/dtlpkqhls/image/upload/v1772333642/tarro-Photoroom_iaugq7.png"
+            class="st-decor st-d" alt="" aria-hidden="true">
+        <div class="container">
+            <img class="sticker sticker--resultados-left"
+                src="https://res.cloudinary.com/dtlpkqhls/image/upload/v1772336217/Dentro_de_este_corazon_ahi_una_cinta_y_dentro_me_p_delpmaspu-Photoroom_mvxkxq.png"
+                alt="" aria-hidden="true" />
+            <h2 class="section-title text-center">Nuestros Resultados</h2>
+            <div class="results-grid">
+
+                <div class="result-card micropigmentacion">
+                    <div class="res-icon"><i class="fas fa-kiss-wink-heart"></i></div>
+                    <h4>Micropigmentación de cejas y labios</h4>
+                    <p>Resultados naturales y perfectos.</p>
+                    <a href="https://www.instagram.com/reel/DPXdX4HDH3q/?igsh=MTU5OTBpdXRiM2Vrag==" target="_blank"
+                        class="btn-res"><i class="fab fa-instagram"></i> Ver en Instagram</a>
+                </div>
+
+                <div class="result-card laminado">
+                    <div class="res-icon"><i class="fas fa-eye"></i></div>
+                    <h4>Laminado de cejas</h4>
+                    <p>Diseño perfilado, fijación y color.</p>
+                    <a href="https://www.instagram.com/reel/DMsPFHURW1I/?igsh=MXI4eno1OGY1NWVsdA==" target="_blank"
+                        class="btn-res"><i class="fab fa-instagram"></i> Ver en Instagram</a>
+                </div>
+
+                <div class="result-card limpieza">
+                    <div class="res-icon"><i class="fas fa-spa"></i></div>
+                    <h4>Limpieza facial</h4>
+                    <p>Tratamientos para una piel brillante.</p>
+                    <a href="https://www.instagram.com/reel/DE3Og3oSIe8/?igsh=MTM0YmIzcnN5ZGxlMw==" target="_blank"
+                        class="btn-res"><i class="fab fa-instagram"></i> Ver en Instagram</a>
+                </div>
+
+                <div class="result-card unas">
+                    <div class="res-icon"><i class="fas fa-hand-sparkles"></i></div>
+                    <h4>Uñas</h4>
+                    <p>Manicure impecable y diseños exclusivos.</p>
+                    <a href="https://www.instagram.com/p/DTn08cVkfkH/?igsh=MWU0bXhxcWNlMDUxYQ==" target="_blank"
+                        class="btn-res"><i class="fab fa-instagram"></i> Ver en Instagram</a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Collage Editorial de Trabajos -->
+    <section class="section collage-section" id="collage-trabajos">
+        <div class="collage-grain"></div>
+        <div class="container collage-container" style="position: relative; overflow: visible;">
+            <div class="collage-header text-center" style="position: relative; z-index: 10; padding-bottom: 1rem;">
+                <h2 class="section-title">Trabajos Destacados</h2>
+                <p class="text-soft" style="color: rgba(255,255,255,0.7); font-size: 1.1rem;">Un vistazo a nuestro arte
+                    y precisión técnica.</p>
+            </div>
+
+            <div class="collage-board">
+                <!-- 1: Cejas (grande, centro-izq) -->
+                <div class="cb-item cb-1">
+                    <div class="cb-inner">
+                        <img src="https://res.cloudinary.com/dtlpkqhls/image/upload/v1772257425/CEJASSSS_anpteu.png"
+                            alt="Cejas perfectas" loading="lazy">
+                        <div class="cb-burn"></div>
+                        <span class="cb-tag">Cejas</span>
+                    </div>
+                </div>
+
+                <!-- 2: Uñas Polygel (superior derecho) -->
+                <div class="cb-item cb-2">
+                    <div class="cb-inner">
+                        <img src="https://res.cloudinary.com/dtlpkqhls/image/upload/v1772257423/U%C3%91AS_POLY_faa6kc.png"
+                            alt="Uñas Polygel" loading="lazy">
+                        <div class="cb-burn"></div>
+                        <span class="cb-tag">Polygel</span>
+                    </div>
+                </div>
+
+                <!-- 3: Labios Micropig (centro) -->
+                <div class="cb-item cb-3">
+                    <div class="cb-inner">
+                        <img src="https://res.cloudinary.com/dtlpkqhls/image/upload/v1772257421/LABIOS_xby5ms.png"
+                            alt="Micropigmentación labios" loading="lazy">
+                        <div class="cb-burn"></div>
+                        <span class="cb-tag">Labios</span>
+                    </div>
+                </div>
+
+                <!-- 4: Algas / Facial (inferior izq) -->
+                <div class="cb-item cb-4">
+                    <div class="cb-inner">
+                        <img src="https://res.cloudinary.com/dtlpkqhls/image/upload/v1772257421/ALGAS_cgcs6x.png"
+                            alt="Tratamiento facial" loading="lazy">
+                        <div class="cb-burn"></div>
+                        <span class="cb-tag">Facial</span>
+                    </div>
+                </div>
+
+                <!-- 5: Lifting pestañas (derecho medio) -->
+                <div class="cb-item cb-5">
+                    <div class="cb-inner">
+                        <img src="https://res.cloudinary.com/dtlpkqhls/image/upload/v1772257420/LIFTING_g3nn9k.png"
+                            alt="Lifting de pestañas" loading="lazy">
+                        <div class="cb-burn"></div>
+                        <span class="cb-tag">Lifting</span>
+                    </div>
+                </div>
+
+                <!-- 6: Cejas diseño (inferior centro) -->
+                <div class="cb-item cb-6">
+                    <div class="cb-inner">
+                        <img src="https://res.cloudinary.com/dtlpkqhls/image/upload/v1772257420/CEJAS_lztlgb.png"
+                            alt="Diseño de cejas" loading="lazy">
+                        <div class="cb-burn"></div>
+                        <span class="cb-tag">Diseño</span>
+                    </div>
+                </div>
+
+                <!-- 7: Cejas hombre (superior izq) -->
+                <div class="cb-item cb-7">
+                    <div class="cb-inner">
+                        <img src="https://res.cloudinary.com/dtlpkqhls/image/upload/v1772257419/CEJAS_HOMBRE_nfpmmo.png"
+                            alt="Cejas masculinas" loading="lazy">
+                        <div class="cb-burn"></div>
+                        <span class="cb-tag">Masculino</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CTA -->
+            <div class="text-center" style="position:relative; z-index: 10; margin-top: 50px;">
+                <a href="https://www.instagram.com/studiobycote/" target="_blank" class="btn-res"
+                    style="font-size: 1.1rem;">
+                    <i class="fab fa-instagram"></i> Ver más en Instagram
+                </a>
+            </div>
+
+            <!-- Sticker Insta -> Espacio right -->
+            <img class="sticker sticker--insta-espacio-right"
+                src="https://res.cloudinary.com/dtlpkqhls/image/upload/v1772340143/Completa_la_imagen_solamente_2k_delpmaspu_1_sraopb.png"
+                alt="" aria-hidden="true" />
+
+            <!-- Sticker Espacio left (Venus rosada, espejo del derecho) -->
+            <img class="sticker sticker--espacio-left-venus"
+                src="https://res.cloudinary.com/dtlpkqhls/image/upload/v1772347491/Venus_diosa_del_amor_creala_en_color_rosado__algo__delpmaspu_1_wa26tn.png"
+                alt="" aria-hidden="true" />
+        </div>
+    </section>
+
+    <!-- Nuestro Espacio — Video del Local -->
+    <section class="local-video-section" id="nuestro-espacio">
+        <div class="local-video-inner">
+            <h2 class="local-video-title">Nuestro Espacio</h2>
+            <p class="local-video-subtitle">Un espacio pensado para que te sientas cómoda, segura y hermosa.</p>
+
+            <div class="local-video-frame">
+                <video class="local-video espacio-video" autoplay loop muted playsinline preload="metadata">
+                    <source src="https://res.cloudinary.com/dtlpkqhls/video/upload/v1772312667/video_fxir9t.mp4"
+                        type="video/mp4">
+                    Tu navegador no soporta video HTML5.
+                </video>
+                <div class="local-video-overlay"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PREVIEW PRODUCTOS -->
+    <section class="section text-center"
+        style="background-color: var(--bg-dark); border-top: 1px solid rgba(255, 255, 255, 0.05); padding-bottom: 50px;">
+        <div class="container">
+            <h2 class="section-title">Nuestros Productos</h2>
+            <p class="text-soft mb-4" style="font-size: 1.1rem;">Velas & aromaterapia seleccionadas para acompañar tu
+                rutina de belleza y bienestar.</p>
+            <a href="productos.html" target="_blank" rel="noopener" class="btn-primary"
+                style="display: inline-block; margin-top: 10px;">
+                Ver todos los productos <i class="fas fa-external-link-alt" style="margin-left: 5px;"></i>
+            </a>
+        </div>
+    </section>
+
+    <!-- Opiniones Google Review Style -->
+    <section class="testimonials-marquee" id="opiniones" style="position: relative;">
+        <!-- Sticker E -->
+        <img src="https://res.cloudinary.com/dtlpkqhls/image/upload/v1772333645/flore_1_u7hofd.png"
+            class="st-decor st-e" alt="" aria-hidden="true">
+        <div class="section-header">
+            <h2>Opiniones de Nuestras Clientas</h2>
+            <span class="section-underline"></span>
+        </div>
+
+        <div class="marquee-wrap" aria-label="Opiniones reales de clientas">
+            <div class="marquee-track" id="marqueeTrack">
+                <!-- Cards -->
+                <article class="t-card">
+                    <div class="t-top">
+                        <span class="t-user">coquiitv</span>
+                        <span class="t-meta"><i class="fab fa-instagram"
+                                style="color: #DEA3D4; font-size: 1.2rem;"></i></span>
+                    </div>
+                    <p class="t-text">LA MEJORSSSS 👏❤️</p>
+                </article>
+
+                <article class="t-card">
+                    <div class="t-top">
+                        <span class="t-user">coquiitv</span>
+                        <span class="t-meta"><i class="fab fa-instagram"
+                                style="color: #DEA3D4; font-size: 1.2rem;"></i></span>
+                    </div>
+                    <p class="t-text">Narración 100/100 ✨ Cejas 200/100 😍😍</p>
+                </article>
+
+                <article class="t-card">
+                    <div class="t-top">
+                        <span class="t-user">hopemails_cl</span>
+                        <span class="t-meta"><i class="fab fa-instagram"
+                                style="color: #DEA3D4; font-size: 1.2rem;"></i></span>
+                    </div>
+                    <p class="t-text">Gracias por llegar a mi vidaaa! Ahora amo mis cejitas ✨🤍</p>
+                </article>
+
+                <article class="t-card">
+                    <div class="t-top">
+                        <span class="t-user">javieeerra</span>
+                        <span class="t-meta"><i class="fab fa-instagram"
+                                style="color: #DEA3D4; font-size: 1.2rem;"></i></span>
+                    </div>
+                    <p class="t-text">la mejor!</p>
+                </article>
+
+                <article class="t-card">
+                    <div class="t-top">
+                        <span class="t-user">p.martinita_21</span>
+                        <span class="t-meta"><i class="fab fa-instagram"
+                                style="color: #DEA3D4; font-size: 1.2rem;"></i></span>
+                    </div>
+                    <p class="t-text">La más seca😍�</p>
+                </article>
+
+                <article class="t-card">
+                    <div class="t-top">
+                        <span class="t-user">ty.cotecita</span>
+                        <span class="t-meta"><i class="fab fa-instagram"
+                                style="color: #DEA3D4; font-size: 1.2rem;"></i></span>
+                    </div>
+                    <p class="t-text">😍😍😍</p>
+                </article>
+
+                <article class="t-card">
+                    <div class="t-top">
+                        <span class="t-user">_jessicamilena</span>
+                        <span class="t-meta"><i class="fab fa-instagram"
+                                style="color: #DEA3D4; font-size: 1.2rem;"></i></span>
+                    </div>
+                    <p class="t-text">Me encantaaa 👏🔥</p>
+                </article>
+
+                <article class="t-card">
+                    <div class="t-top">
+                        <span class="t-user">sandy_sfs</span>
+                        <span class="t-meta"><i class="fab fa-instagram"
+                                style="color: #DEA3D4; font-size: 1.2rem;"></i></span>
+                    </div>
+                    <p class="t-text">Una verdadera maravilla que hace increíbles trabajos en mujeres y hombres !!! Una
+                        profesional integral !!!</p>
+                </article>
+
+                <article class="t-card">
+                    <div class="t-top">
+                        <span class="t-user">_pattymira_</span>
+                        <span class="t-meta"><i class="fab fa-instagram"
+                                style="color: #DEA3D4; font-size: 1.2rem;"></i></span>
+                    </div>
+                    <p class="t-text">Me encanta seca la Cote 👏</p>
+                </article>
+
+                <article class="t-card">
+                    <div class="t-top">
+                        <span class="t-user">_carocavieres_</span>
+                        <span class="t-meta"><i class="fab fa-instagram"
+                                style="color: #DEA3D4; font-size: 1.2rem;"></i></span>
+                    </div>
+                    <p class="t-text">Seca mi bb!❤️</p>
+                </article>
+
+                <article class="t-card">
+                    <div class="t-top">
+                        <span class="t-user">isi_montessss</span>
+                        <span class="t-meta"><i class="fab fa-instagram"
+                                style="color: #DEA3D4; font-size: 1.2rem;"></i></span>
+                    </div>
+                    <p class="t-text">meee encantaron 😭 porfin ❤️ eres la mejor</p>
+                </article>
+
+                <article class="t-card">
+                    <div class="t-top">
+                        <span class="t-user">malvadaquin</span>
+                        <span class="t-meta"><i class="fab fa-instagram"
+                                style="color: #DEA3D4; font-size: 1.2rem;"></i></span>
+                    </div>
+                    <p class="t-text">👏👏👏👏👏</p>
+                </article>
+
+                <article class="t-card">
+                    <div class="t-top">
+                        <span class="t-user">ty.cotecita</span>
+                        <span class="t-meta"><i class="fab fa-instagram"
+                                style="color: #DEA3D4; font-size: 1.2rem;"></i></span>
+                    </div>
+                    <p class="t-text">que son lindas �</p>
+                </article>
+            </div>
+
+            <!-- Glitter layer -->
+            <div class="glitter-layer" id="glitterLayer" aria-hidden="true"></div>
+        </div>
+    </section>
+
+    <!-- Ubicación -->
+    <section class="section location-section" id="ubicacion">
+        <div class="container">
+            <h2 class="section-title text-center">Dónde Encontrarnos</h2>
+            <div class="loc-grid">
+                <div class="loc-details">
+                    <div class="loc-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h4>Dirección</h4>
+                            <p>Comandante Whiteside 4903, Oficina 302, San Miguel<br>Referencia: Av. La Marina, frente a
+                                Plaza La Marina</p>
+                            <p class="text-primary mt-2" style="font-weight: bold;">Metro cercano: Lo Vial (Línea 2) 📍
+                            </p>
+                            <p class="mt-2" style="font-size: 0.9rem;">Buses: 301, 201, 214, 226, 223</p>
+                        </div>
+                    </div>
+                    <div class="loc-item">
+                        <i class="fas fa-clock"></i>
+                        <div>
+                            <h4>Horario de Atención</h4>
+                            <p>Lunes a Viernes: 10:00 - 19:00 hrs<br>Sábados: 10:00 - 14:00 hrs</p>
+                        </div>
+                    </div>
+                    <div class="loc-item">
+                        <i class="fas fa-phone-alt"></i>
+                        <div>
+                            <h4>Contacto</h4>
+                            <p>+56 9 1234 5678</p>
+                        </div>
+                    </div>
+                    <div class="mt-4">
+                        <a href="https://maps.app.goo.gl/Rp4SwVX6JQKazyqe8?g_st=ic" target="_blank"
+                            class="btn-primary w-100">
+                            Abrir en Google Maps <i class="fas fa-external-link-alt"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="loc-video-col"
+                    style="border-radius: 20px; overflow: hidden; height: 100%; max-height: 400px;">
+                    <video class="location-video" autoplay loop muted playsinline preload="metadata"
+                        style="width: 100%; height: 100%; object-fit: cover;">
+                        <source
+                            src="https://res.cloudinary.com/dtlpkqhls/video/upload/v1772320136/ScreenRecording_02-28-2026_19-50-00_1_u4vzqc.mp4"
+                            type="video/mp4">
+                    </video>
+                </div>
+                <div class="loc-map">
+                    <iframe
+                        src="https://www.google.com/maps?q=Comandante+Whiteside+4903,+San+Miguel,+Santiago+de+Chile&output=embed"
+                        width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer" id="contacto" style="position: relative;">
+        <!-- Sticker F -->
+        <img src="https://res.cloudinary.com/dtlpkqhls/image/upload/v1772333296/shop_rara-Photoroom_jswdlr.png"
+            class="st-decor st-f" alt="" aria-hidden="true">
+        <div class="container footer-content">
+            <div class="footer-about">
+                <img src="https://res.cloudinary.com/dtlpkqhls/image/upload/v1772319697/upscalemedia-transformed_jbbf3w.png"
+                    alt="studiobycote" style="height: 60px; margin-bottom: 15px; width: auto; object-fit: contain;">
+                <p>Especialistas en resaltar tu belleza natural con técnicas de vanguardia y productos premium.</p>
+            </div>
+            <div class="footer-links">
+                <h4>Enlaces Útiles</h4>
+                <ul>
+                    <li><a href="#servicios">Servicios</a></li>
+                    <li><a href="#resultados">Resultados</a></li>
+                    <li><a href="tarjeta.html">Tarjeta Digital</a></li>
+                    <li><a href="terminos.html">Términos y Condiciones</a></li>
+                    <li><a href="#" class="open-reserva">Reservar Cita</a></li>
+                </ul>
+            </div>
+            <div class="footer-social">
+                <h4>Síguenos</h4>
+                <div class="social-icons">
+                    <a href="https://www.instagram.com/studiobycote/" target="_blank"><i
+                            class="fab fa-instagram"></i></a>
+                    <a href="https://www.tiktok.com/@studiobycote" target="_blank"><i class="fab fa-tiktok"></i></a>
+                    <a href="https://wa.me/message/JXGXGJEPIQZSI1" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 studiobycote. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- Booking Success Toast -->
+    <div class="booking-toast" id="booking-toast">
+        <div class="toast-icon"><i class="fas fa-check-circle"></i></div>
+        <div class="toast-body">
+            <h4>¡Recibimos tu solicitud! ✨</h4>
+            <p>Confirmaremos tu reserva dentro de 24 horas.</p>
+            <p class="toast-sub">Te llegará un correo de confirmación. Si hay algún problema, te contactaremos.</p>
+        </div>
+        <button class="toast-close" id="toast-close" aria-label="Cerrar"><i class="fas fa-times"></i></button>
+    </div>
+
+    <!-- Scripts -->
+    <script defer src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script defer src="js/services.js"></script>
+    <script defer src="js/main.js"></script>
+
+    <!-- Booking confirmation toast handler -->
+    <script>
+        (function () {
+            var params = new URLSearchParams(window.location.search);
+            if (params.get('booking') === 'ok') {
+                // Remove param from URL
+                history.replaceState(null, '', window.location.pathname);
+                // Show toast
+                var toast = document.getElementById('booking-toast');
+                if (toast) {
+                    setTimeout(function () { toast.classList.add('show'); }, 500);
+                    // Auto-hide after 12s
+                    setTimeout(function () { toast.classList.remove('show'); }, 12000);
+                    document.getElementById('toast-close').addEventListener('click', function () {
+                        toast.classList.remove('show');
+                    });
+                }
+            }
+        })();
+    </script>
+
+    <!-- Fallback autoplay for Nuestro Espacio video -->
+    <script>
+        window.addEventListener('load', function () {
+            var v = document.querySelector('.espacio-video');
+            if (!v) return;
+            var tryPlay = function () { v.play().catch(function () { }); };
+            tryPlay();
+            var onInteract = function () {
+                tryPlay();
+                window.removeEventListener('click', onInteract);
+                window.removeEventListener('touchstart', onInteract);
+                window.removeEventListener('scroll', onInteract);
+            };
+            window.addEventListener('click', onInteract, { passive: true });
+            window.addEventListener('touchstart', onInteract, { passive: true });
+            window.addEventListener('scroll', onInteract, { passive: true });
+        });
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reserva tu Cita — studiobycote</title>
+    <meta name="description"
+        content="Reserva tu hora en Studio By Cote. Micropigmentación, cejas, pestañas, uñas y más.">
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+    <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Flatpickr Premium Calendar -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/themes/dark.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <a href="index.html" class="nav-logo">
+            <img src="https://res.cloudinary.com/dtlpkqhls/image/upload/v1772319697/upscalemedia-transformed_jbbf3w.png"
+                alt="studiobycote">
+        </a>
+        <a href="index.html" class="nav-back-link"><i class="fas fa-arrow-left"></i> Volver al inicio</a>
+    </nav>
+
+    <main class="rv-page">
+        <div class="rv-container">
+
+            <!-- Header -->
+            <div class="rv-header text-center">
+                <h1 class="rv-title">Reserva tu Cita ✨</h1>
+                <p class="rv-subtitle">Selecciona tus servicios, elige tu horario, sube tu comprobante y confirma.</p>
+                <div class="rv-indicator">
+                    <div class="step-dot active" data-step="1"><span>1</span><small>Servicios</small></div>
+                    <div class="step-line"></div>
+                    <div class="step-dot" data-step="2"><span>2</span><small>Horario</small></div>
+                    <div class="step-line"></div>
+                    <div class="step-dot" data-step="3"><span>3</span><small>Pago</small></div>
+                    <div class="step-line"></div>
+                    <div class="step-dot" data-step="4"><span>4</span><small>Datos</small></div>
+                    <div class="step-line"></div>
+                    <div class="step-dot" data-step="5"><span>5</span><small>Confirmar</small></div>
+                </div>
+            </div>
+
+            <!-- ===================== STEP 1: Servicios ===================== -->
+            <div class="rv-step active" id="rv-step-1">
+                <div class="rv-grid">
+                    <div class="rv-catalog">
+                        <h2><i class="fas fa-list"></i> Catálogo de Servicios</h2>
+
+                        <!-- Search bar -->
+                        <div class="sv-search-wrap">
+                            <i class="fas fa-search sv-search-icon"></i>
+                            <input type="text" id="service-search" class="input-form sv-search"
+                                placeholder="Buscar servicio... (ej: micro, cejas, labios)">
+                        </div>
+
+                        <select id="category-filter" class="rv-select"></select>
+                        <div class="sv-list" id="services-list"></div>
+                    </div>
+
+                    <!-- Service Detail Drawer (in-page, not modal) -->
+                    <div class="rv-sidebar">
+                        <div class="rv-cart">
+                            <h2><i class="fas fa-shopping-bag"></i> Tu Selección <span class="cart-badge"
+                                    id="cart-count">0</span></h2>
+                            <div class="cart-items" id="cart-items"></div>
+                            <p class="cart-empty-msg" id="cart-empty">Aún no has seleccionado servicios.</p>
+                            <div class="cart-totals">
+                                <div class="ct-row"><span>Total estimado:</span><strong id="cart-total">$0</strong>
+                                </div>
+                                <div class="ct-row"><span>Duración aprox:</span><strong id="cart-duration">0
+                                        min</strong></div>
+                            </div>
+                            <button class="btn-primary w-100" style="margin-top:20px;" id="btn-to-step2" disabled>
+                                Continuar <i class="fas fa-arrow-right"></i>
+                            </button>
+                        </div>
+
+                        <!-- Service info panel (shows when clicking info icon) -->
+                        <div class="sv-detail-panel" id="sv-detail-panel" style="display:none;">
+                            <button class="sv-detail-close" id="sv-detail-close" aria-label="Cerrar detalle"><i
+                                    class="fas fa-times"></i></button>
+                            <h3 id="sv-detail-name"></h3>
+                            <div class="sv-detail-meta">
+                                <span class="meta-tag"><i class="fas fa-tag"></i> <span
+                                        id="sv-detail-price"></span></span>
+                                <span class="meta-tag"><i class="fas fa-clock"></i> <span
+                                        id="sv-detail-duration"></span></span>
+                            </div>
+                            <p class="sv-detail-desc" id="sv-detail-desc"></p>
+                            <div id="sv-detail-includes"></div>
+                            <div id="sv-detail-warning" class="sv-warning" style="display:none;"></div>
+                            <button class="btn-primary w-100" id="sv-detail-add" style="margin-top:15px;">
+                                <i class="fas fa-plus"></i> Agregar al carrito
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ===================== STEP 2: Fecha y Hora ===================== -->
+            <div class="rv-step" id="rv-step-2">
+                <div class="rv-date-section">
+                    <h2><i class="fas fa-calendar-alt"></i> Elige fecha y hora</h2>
+                    <p class="rv-month-notice">
+                        <i class="fas fa-info-circle" style="color:var(--soft);"></i>
+                        Solo puedes reservar en <strong id="current-month-label"></strong>.
+                    </p>
+                    <div class="rv-date-grid">
+                        <div class="rv-date-pick">
+                            <label for="rv-date">Selecciona un día:</label>
+                            <input type="text" id="rv-date" class="input-form neon-datepicker"
+                                placeholder="Toca para elegir fecha" readonly>
+                        </div>
+                        <div class="rv-time-pick">
+                            <label>Horarios disponibles:</label>
+                            <div class="time-slots-grid" id="rv-time-slots">
+                                <p style="color:#888; font-size:0.9rem;">Selecciona una fecha primero.</p>
+                            </div>
+                            <p class="no-slots-msg" id="no-slots-msg" style="display:none;">
+                                <i class="fas fa-exclamation-circle"></i> No hay horarios disponibles para esta fecha.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="rv-nav-btns">
+                        <button class="btn-secondary" id="btn-back-1"><i class="fas fa-arrow-left"></i> Atrás</button>
+                        <button class="btn-primary" id="btn-to-step3" disabled>Continuar <i
+                                class="fas fa-arrow-right"></i></button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ===================== STEP 3: Pago / Comprobante ===================== -->
+            <div class="rv-step" id="rv-step-3">
+                <div class="rv-payment-section">
+                    <h2><i class="fas fa-credit-card"></i> Pago y Comprobante</h2>
+                    <div class="payment-info-card">
+                        <div class="payment-badge"><i class="fas fa-shield-alt"></i></div>
+                        <h3>Abono requerido: <strong style="color:var(--soft);">$30.000 CLP</strong> por cada
+                            procedimiento</h3>
+                        <p>Ese abono se descuenta del precio total del/los servicios.<br><br>
+                            <strong>Plazo para pagar:</strong> el abono debe pagarse dentro de los primeros 20 minutos
+                            desde que se realiza la reserva; si no, la hora queda liberada.<br><br>
+                            Debes enviar/subir el comprobante de transferencia y recién ahí la cita quedará "en proceso
+                            de confirmación".
+                        </p>
+                        <div class="bank-details-grid">
+                            <div class="bank-row"><span>Banco:</span><strong>Banco Estado</strong></div>
+                            <div class="bank-row"><span>Tipo:</span><strong>Cuenta RUT</strong></div>
+                            <div class="bank-row"><span>Rut:</span><strong>12.345.678-9</strong></div>
+                            <div class="bank-row"><span>Nombre:</span><strong>María Cote</strong></div>
+                            <div class="bank-row"><span>Email:</span><strong>pagos@studiocote.cl</strong></div>
+                        </div>
+                    </div>
+                    <div class="upload-section">
+                        <h3><i class="fas fa-cloud-upload-alt"></i> Sube tu comprobante</h3>
+                        <p class="upload-hint">Acepta: JPG, PNG o PDF · Máximo 10 MB</p>
+                        <div class="upload-area" id="upload-area">
+                            <input type="file" id="proof-file" accept="image/jpeg,image/png,application/pdf"
+                                class="file-input-hidden">
+                            <div class="upload-placeholder">
+                                <i class="fas fa-cloud-upload-alt"></i>
+                                <span>Haz clic o arrastra tu archivo aquí</span>
+                            </div>
+                            <div class="file-preview" id="file-preview"></div>
+                        </div>
+                        <div class="file-meta">
+                            <span id="file-name"></span>
+                            <span id="file-size"></span>
+                            <button class="btn-remove-sm" id="btn-remove-file" style="display:none;"
+                                aria-label="Quitar archivo">
+                                <i class="fas fa-trash-alt"></i> Quitar
+                            </button>
+                        </div>
+                        <p class="file-error" id="file-error" style="display:none;"></p>
+                    </div>
+                    <div class="rv-nav-btns">
+                        <button class="btn-secondary" id="btn-back-2"><i class="fas fa-arrow-left"></i> Atrás</button>
+                        <button class="btn-primary" id="btn-to-step4" disabled>Continuar <i
+                                class="fas fa-arrow-right"></i></button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ===================== STEP 4: Datos del Cliente ===================== -->
+            <div class="rv-step" id="rv-step-4">
+                <div class="rv-client-section">
+                    <h2><i class="fas fa-user"></i> Tus Datos</h2>
+                    <p style="color:#aaa; margin-bottom:25px;">Estos datos se usan para confirmar tu reserva.</p>
+                    <form id="form-client" autocomplete="on" novalidate>
+                        <div class="form-group">
+                            <label for="client-name"><i class="fas fa-user"></i> Nombre y apellido</label>
+                            <input type="text" id="client-name" class="input-form" placeholder="Ej: María López"
+                                required minlength="3" maxlength="60" autocomplete="name">
+                        </div>
+                        <div class="form-group">
+                            <label for="client-email"><i class="fas fa-envelope"></i> Correo electrónico</label>
+                            <input type="email" id="client-email" class="input-form" placeholder="Ej: maria@gmail.com"
+                                required autocomplete="email">
+                        </div>
+                        <div class="form-group">
+                            <label for="client-whatsapp"><i class="fab fa-whatsapp"></i> WhatsApp</label>
+                            <input type="tel" id="client-whatsapp" class="input-form" placeholder="+56912345678"
+                                required pattern="^\+56\d{8,9}$" autocomplete="tel">
+                            <small class="field-hint">Formato: +56 + 9 dígitos (ej: +56912345678)</small>
+                        </div>
+                    </form>
+                    <div class="rv-nav-btns">
+                        <button class="btn-secondary" id="btn-back-3"><i class="fas fa-arrow-left"></i> Atrás</button>
+                        <button class="btn-primary" id="btn-to-step5" disabled>Continuar <i
+                                class="fas fa-arrow-right"></i></button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ===================== STEP 5: Resumen / Confirmar ===================== -->
+            <div class="rv-step" id="rv-step-5">
+                <div class="rv-summary-section">
+                    <h2><i class="fas fa-check-circle" style="color:var(--accent);"></i> Resumen de tu Reserva</h2>
+                    <div class="sum-card">
+                        <h3>Servicios seleccionados</h3>
+                        <div id="summary-services"></div>
+                        <div class="sum-total-row"><span>Total:</span><strong id="summary-total">$0</strong></div>
+                        <div class="sum-duration-row"><span>Duración total:</span><strong id="summary-duration">0
+                                min</strong></div>
+                    </div>
+                    <div class="sum-datetime">
+                        <div class="sum-detail"><i class="fas fa-calendar-day"></i>
+                            <div><small>Fecha</small><strong id="summary-date">-</strong></div>
+                        </div>
+                        <div class="sum-detail"><i class="fas fa-clock"></i>
+                            <div><small>Hora</small><strong id="summary-time">-</strong></div>
+                        </div>
+                    </div>
+                    <div class="sum-client-card">
+                        <h3>Datos del cliente</h3>
+                        <div id="summary-client"></div>
+                    </div>
+                    <div class="sum-proof"><span id="summary-proof"><i class="fas fa-file"></i> Comprobante
+                            cargado</span></div>
+
+                    <div class="info-box" style="margin-top: 20px; text-align: center;">
+                        <p><i class="fas fa-info-circle" style="color:var(--soft);"></i>
+                            Al confirmar, enviaremos tu solicitud. La dueña revisará tu comprobante y confirmará tu
+                            reserva dentro de <strong>24 horas</strong>.
+                            Te llegará un correo de confirmación.</p>
+                    </div>
+
+                    <p class="confirm-error" id="confirm-error" style="display:none;"></p>
+                    <div class="confirm-loader" id="confirm-loader" style="display:none;">
+                        <i class="fas fa-spinner fa-spin"></i> Enviando tu reserva...
+                    </div>
+
+                    <button class="btn-primary w-100 btn-confirm-booking" id="btn-confirm">
+                        <i class="fas fa-paper-plane"></i> Confirmar Reserva
+                    </button>
+                    <a href="#" target="_blank" id="btn-whatsapp" class="btn-wa-confirm" style="margin-top: 12px;">
+                        <i class="fab fa-whatsapp"></i> Enviar también por WhatsApp
+                    </a>
+                    <div class="rv-nav-btns" style="margin-top: 15px;">
+                        <button class="btn-secondary" id="btn-back-4"><i class="fas fa-arrow-left"></i>
+                            Modificar</button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <footer class="footer" style="padding: 30px 0;">
+        <div class="footer-bottom">
+            <p>&copy; 2026 studiobycote. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- Flatpickr JS -->
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr/dist/l10n/es.js"></script>
+    <script src="js/services.js"></script>
+    <script src="js/reservation.js"></script>
+</body>
+
+</html>
