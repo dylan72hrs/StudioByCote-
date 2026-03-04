@@ -113,7 +113,6 @@
         els.sumProof = $('#summary-proof');
         els.btnConfirm = $('#btn-confirm');
         els.btnBack4 = $('#btn-back-4');
-        els.btnWA = $('#btn-whatsapp');
         els.loader = $('#confirm-loader');
         els.error = $('#confirm-error');
     }
@@ -509,20 +508,6 @@
             : (state.proofFile
                 ? '<i class="fas fa-check-circle" style="color:var(--accent);"></i> ' + state.proofFile.name
                 : '<i class="fas fa-times-circle" style="color:#ff6666;"></i> Sin comprobante');
-
-        buildWAMsg(total);
-    }
-
-    function buildWAMsg(total) {
-        var m = 'Hola, quiero reservar:\n\n';
-        state.services.forEach(function (s) { m += '• ' + s.name + ': ' + formatCLP(s.price) + '\n'; });
-        m += '\n💰 Total: ' + formatCLP(total);
-        m += '\n📅 Fecha: ' + fmtDate(state.date);
-        m += '\n🕐 Hora: ' + state.time;
-        m += '\n\n👤 ' + state.clientName;
-        m += '\n📱 ' + state.clientWA;
-        m += '\n\nQuedo atenta/o a confirmación. ¡Gracias! ✨';
-        els.btnWA.href = 'https://wa.me/message/JXGXGJEPIQZSI1?text=' + encodeURIComponent(m);
     }
 
     // =============================================
@@ -592,22 +577,28 @@
                 body: JSON.stringify(payload)
             }, 15000);
 
-            // Handle 409 — slot taken
-            if (res.status === 409) {
-                showError('⚠️ Hora no disponible, elige otra. Alguien acaba de reservar ese horario.');
+            // 1. Parse response body safely
+            var data = await res.json().catch(function () { return {}; });
+
+            // 2. Check for slot-conflict (race condition)
+            if (
+                res.status === 409 ||
+                (data.ok === false && (data.error === 'Slot taken' || data.error === 'race_condition'))
+            ) {
+                showError(data.message || '⚠️ Hora no disponible. Alguien la reservó justo antes.');
                 els.btnConfirm.disabled = false;
-                // Re-fetch availability to update UI
                 fetchSlots(state.date);
                 return;
             }
 
-            if (!res.ok) {
-                var errText = '';
-                try { errText = await res.text(); } catch (_) { }
-                throw new Error('Error del servidor: ' + res.status + (errText ? ' — ' + errText : ''));
+            // 3. Check for any other error
+            if (!res.ok || data.ok === false) {
+                showError(data.message || (data.errors && data.errors.join && data.errors.join('\n')) || 'Error al procesar la reserva. Intenta de nuevo.');
+                els.btnConfirm.disabled = false;
+                return;
             }
 
-            // Success
+            // 4. All validations passed → success
             console.log('✅ Reserva enviada correctamente.');
             showSuccess();
 
